@@ -1,0 +1,37 @@
+﻿@page "/"
+@inject IApiConnector<Root> ApiConnector
+
+
+
+<h1>A quote per day keeps the doctor away!</h1>
+
+<div>
+    @if (_quote.slip.advice != null)
+    {
+        @_quote.slip.advice
+    }
+</div>
+
+<button type="submit" @onclick="GiveANewQuoteAsync">Here you go</button>
+
+<div class="attribution">
+    Coded by <a href="#">Justine Vanwynsberghe</a>.
+</div>
+
+@code
+{
+    private Root? _quote;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _quote = await ApiConnector.GetAsync("https://api.adviceslip.com/advice");
+    }
+
+    private async Task GiveANewQuoteAsync()
+    {
+        _quote = await ApiConnector.GetAsync("https://api.adviceslip.com/advice");
+    }
+
+
+
+}
