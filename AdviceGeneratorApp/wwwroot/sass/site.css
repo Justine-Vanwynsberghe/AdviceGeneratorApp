@@ -1,4 +1,7 @@
-﻿/* Box sizing rules */
+﻿/*Colors*/
+/*Fonts*/
+/*Screen widths*/
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -71,10 +74,105 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.attribution {
-  font-size: 11px;
+/*Colors*/
+/*Fonts*/
+/*Screen widths*/
+body {
+  background-color: #1f2632;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+body .article-content {
+  background-color: #323a49;
+  border-radius: 3%;
+  position: relative;
+  padding-bottom: 10rem;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  body .article-content {
+    width: 33rem;
+    padding-bottom: 5rem;
+  }
+}
+body .article-content .article-title {
+  color: #52ffa8;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 3.5rem 0 3rem;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+@media (min-width: 1000px) {
+  body .article-content .article-title {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+body .article-content .article-text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 0 3.5rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1000px) {
+  body .article-content .article-text {
+    font-size: 2rem;
+    padding: 0 4rem 2.5rem 4rem;
+    padding-bottom: 2.5rem;
+  }
+}
+body .article-content .article-img {
+  padding: 0 4rem;
+  width: 100%;
+}
+body .btn-quote {
+  padding: 3rem;
+  border-radius: 50%;
+  background-color: #52ffa8;
+  position: absolute;
+  top: 91%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border: none;
+}
+body .btn-quote:hover {
+  box-shadow: 0 0 2em 0.5em #52ffa8;
+}
+@media (min-width: 1000px) {
+  body .btn-quote {
+    padding: 1.5rem;
+  }
+}
+body .btn-quote .btn-quote-img {
+  width: 4rem;
+  height: 4rem;
+}
+@media (min-width: 1000px) {
+  body .btn-quote .btn-quote-img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+body .attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  height: 4rem;
+  font-size: 2rem;
+  color: #ffffff;
   text-align: center;
 }
-.attribution .attribution a {
-  color: hsl(228deg, 45%, 44%);
+@media (min-width: 1000px) {
+  body .attribution {
+    font-size: 0.75rem;
+  }
 }

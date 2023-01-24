@@ -2,21 +2,35 @@
 @inject IApiConnector<Root> ApiConnector
 
 
+<div class="article-content">
+    <h1 class="article-title">
+        advice #
+        @if (_quote != null)
+        {
+            @_quote.slip.id
+        }
+    </h1>
 
-<h1>A quote per day keeps the doctor away!</h1>
+    <p class="article-text">
+        @if (_quote != null)
+        {
+            <q>
+                @_quote.slip.advice
+            </q>
+        }
+    </p>
 
-<div>
-    @if (_quote.slip.advice != null)
-    {
-        @_quote.slip.advice
-    }
+    <img class="article-img" src="Images/pattern-divider-mobile.svg" alt="divider-mobile" />
+
+    <button class="btn-quote" type="submit" @onclick="GiveANewQuoteAsync">
+        <img class="btn-quote-img" src="Images/icon-dice.svg" alt="dice" />
+    </button>
 </div>
 
-<button type="submit" @onclick="GiveANewQuoteAsync">Here you go</button>
 
-<div class="attribution">
-    Coded by <a href="#">Justine Vanwynsberghe</a>.
-</div>
+<footer class="attribution">
+    Coded by Justine Vanwynsberghe.
+</footer>
 
 @code
 {

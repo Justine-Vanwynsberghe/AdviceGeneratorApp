@@ -1,9 +1,105 @@
-﻿.attribution {
-    font-size: 11px;
-    text-align: center;
+﻿@import "_Variables.scss";
+@import "_MixIns.scss";
 
-    .attribution a {
-        color: hsl(228, 45%, 44%);
+
+body {
+    background-color: $dark-blue;
+    font-family: $manrope;
+    @include FlexCenter;
+    padding: 0 2rem;
+
+
+    .article-content {
+        background-color: $dark-grayish-blue;
+        border-radius: 3%;
+        position: relative;
+        padding-bottom: 10rem;
+        width: 100%;
+
+        @media (min-width: 1000px) {
+            width: 33rem;
+            padding-bottom: 5rem;
+        }
+
+        .article-title {
+            color: $neon-green;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 3.5rem 0 3rem;
+            font-size: 2rem;
+            letter-spacing: 0.30rem;
+
+            @media (min-width: 1000px) {
+                font-size: 1rem;
+                padding-bottom: 1rem;                
+            }
+        }
+
+        .article-text {
+            color: $white;
+            font-weight: bold;
+            font-size: 3rem;
+            padding: 0 3.5rem;
+            text-align: center;
+            padding-bottom: 4rem;
+
+            @media (min-width: 1000px) {
+                font-size: 2rem;
+                padding: 0 4rem 2.5rem 4rem;
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        .article-img {
+            padding: 0 4rem;
+            width: 100%;
+        }
+    }
+
+    .btn-quote {
+        padding: 3rem;
+        border-radius: 50%;
+        background-color: $neon-green;
+        position: absolute;
+        top: 91%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            box-shadow: 0 0 2em 0.5em $neon-green;
+        }
+
+        @media (min-width: 1000px) {
+            padding: 1.5rem;
+        }
+
+        .btn-quote-img {
+            width: 4rem;
+            height: 4rem;
+
+            @media (min-width: 1000px) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        height: 4rem;
+        font-size: 2rem;
+        color: $white;
+        text-align: center;
+
+        @media (min-width: 1000px) {
+            font-size: 0.75rem;
+        }
     }
 }
-

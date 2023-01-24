@@ -5,7 +5,6 @@ using AdviceGeneratorApp.ApiService.Interfaces;
 namespace AdviceGeneratorApp.ApiService
 {
     public class ApiConnector<T> : IApiConnector<T>
-
     {
         private readonly HttpClient _httpClient;
 
